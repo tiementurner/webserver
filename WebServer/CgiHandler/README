@@ -1,0 +1,16 @@
+//Basic idea of cgi: running external script
+// External script is specified in the config file: the extention and the name
+// if HTTP request makes a request with the relative cgi path, the cgi gets executed
+
+// If cgi is specified in a location block, the path specified is handled as cgi input.
+// If uri from the http request is the same as a cgi path specified in the config files, cgi script will be exectuted
+// SO: if match request & cgi path: execute cgi class
+// Should work with GET (coolCgi) and POST(file upload)
+
+// works for port 8081
+// works for .php 
+// make sure the php has x rights
+// Set runLoc to the path of the .php runner (command: which php)
+
+// Execution of cgi: create a child process (with fork), then replace the child process wiht the cgi script (with execve)
+// pipes: responsible for sending data to the CGI script and receiving data from it: for file upload

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Penguinserv</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Set the desired height */
+        }
+        .image-container img {
+            max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+            max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Penguinserv </h1>
+        <p>This is the default landing page for Penguinserv.</p>
+        <div class="image-container">
+            <img src="./img/indexPenguin.jpg" alt="Index Penguin Image">
+        </div>
+		<form  enctype="multipart/form-data" method="post">
+			<input  name="myfile" type="file" />
+			<input type="submit" value="submit" id="submit" />
+		 </form>
+		 <form method="post" action="cgiRoute/postCgi.php">
+            Name: <input type="text" name="name">
+            <input type="submit" value="Submit">
+        </form>
+        <p>Feel free to penguin up.</p>
+    </div>
+</body>
+</html>
